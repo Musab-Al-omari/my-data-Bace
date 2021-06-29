@@ -16,7 +16,9 @@ router.delete('/:id', deleteItem);
 
 
 async function getAllDataBace(request,response) {
+    console.log('hi');
     let allDataBace= await MySchemaInstance.get()
+    console.log(allDataBace);
     response.json(allDataBace)
 }
 
@@ -27,8 +29,11 @@ async function getOneItem(request,response) {
     
 }
 async function createItem(request,response) {
+
     let theFrontBody=request.body
+    console.log(theFrontBody);
     let createItem=await MySchemaInstance.create(theFrontBody)
+    console.log(createItem);
     response.status(201).json(createItem);
 }
 

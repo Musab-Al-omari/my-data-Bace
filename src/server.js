@@ -2,7 +2,7 @@
 
 const express = require('express');
 const app = express();
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://musab:omar@mystorge.9eycc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const MONGODB_URI ='mongodb+srv://musab:omar@mystorge.9eycc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const mongoose = require('mongoose')
 const storageRouter=require('./routes/myStorage')
 mongoose.connect(MONGODB_URI, {
